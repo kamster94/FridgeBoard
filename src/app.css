@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.icon {
+  width: 2em;
+  height: auto;
+}
