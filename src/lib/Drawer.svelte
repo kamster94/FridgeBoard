@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from '$app/stores';
 
-  import { Link } from './_types';
+  import type { Link } from './_types';
 
   import Icon from './Icon.svelte';
 

@@ -6,6 +6,7 @@
   import MdNotifications from 'svelte-icons/md/MdNotifications.svelte';
   import MdHome from 'svelte-icons/md/MdHome.svelte';
   import MdHelp from 'svelte-icons/md/MdHelp.svelte';
+  import MdEuroSymbol from 'svelte-icons/md/MdEuroSymbol.svelte';
 
   export let icon: IconEnum;
 </script>
@@ -21,5 +22,7 @@
     <MdHome />
   {:else if icon === IconEnum.Help}
     <MdHelp />
+  {:else if icon === IconEnum.Money}
+    <MdEuroSymbol />
   {/if}
 </div>

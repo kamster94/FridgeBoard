@@ -8,8 +8,13 @@ export const pages: Link[] = [
     icon: IconEnum.Home
   },
   {
+    label: 'Bills',
+    href: '/bills',
+    icon: IconEnum.Money
+  },
+  {
     label: 'About',
     href: '/about',
-    icon: IconEnum.Help,
+    icon: IconEnum.Help
   }
 ];

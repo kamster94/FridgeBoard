@@ -1,4 +1,4 @@
-import type {IconEnum} from "./_enums";
+import type { IconEnum } from './_enums';
 
 export interface Link {
   label: string;

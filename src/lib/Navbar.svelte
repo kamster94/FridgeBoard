@@ -1,17 +1,19 @@
-<!--suppress XmlInvalidId -->
 <script lang="ts">
   import { page } from '$app/stores';
 
-  import { pages } from './_pages';
-  import { IconEnum } from './_enums.ts';
+  import { pages } from '$lib/_pages';
+  import { IconEnum } from '$lib/_enums';
 
-  import Icon from './Icon.svelte';
+  import Icon from '$lib/Icon.svelte';
+  import { afterUpdate } from 'svelte';
 
-  let pagePath = $page.url.pathname;
+  $: pagePath = $page.url.pathname;
 
-  function getPageTitle() {
-    return pages.find((page) => page.href === pagePath).label;
-  }
+  let pageName: string | undefined;
+
+  afterUpdate(() => {
+    pageName = pages.find((page) => page.href === pagePath)?.label;
+  });
 </script>
 
 <header class="navbar bg-base-100">
@@ -23,7 +25,7 @@
     </div>
   </div>
   <div class="navbar-center">
-    <h1>{getPageTitle()}</h1>
+    <h1>{pageName}</h1>
   </div>
   <div class="navbar-end">
     <button class="btn btn-ghost btn-circle">

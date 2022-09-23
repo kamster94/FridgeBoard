@@ -1,9 +1,11 @@
 <script>
   import '../app.css';
-  import { pages } from '../lib/_pages';
+
+  import { pages } from '$lib/_pages';
+
   import Navbar from '$lib/Navbar.svelte';
-  import Drawer from '../lib/Drawer.svelte';
-  import Footer from '../lib/Footer.svelte';
+  import Drawer from '$lib/Drawer.svelte';
+  import Footer from '$lib/Footer.svelte';
 </script>
 
 <div class="drawer h-screen">
@@ -11,7 +13,9 @@
   <div class="drawer-content flex flex-col h-screen justify-between">
     <Navbar />
 
-    <main class="container mx-auto mb-auto h-10 ">
+    <main
+      class="container mx-auto mb-auto px-2 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent"
+    >
       <slot />
     </main>
 

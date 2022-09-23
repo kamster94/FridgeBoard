@@ -4,4 +4,5 @@ export enum IconEnum {
   Notification = 3,
   Home = 4,
   Help = 5,
+  Money = 6
 }
